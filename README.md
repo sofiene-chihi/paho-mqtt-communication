@@ -14,4 +14,4 @@ We're using username/password authentication when connecting to the broker and t
 
 ### How to execute it?
 
-The client1 should be the first script to run since the client2 is just listening and responding to the messages recieved from client1 and make sure that the mosquitto broker is running.
+The client1 should be the first script to run since it is listening and responding to the messages recieved from client1 and make sure that the mosquitto broker is running.
