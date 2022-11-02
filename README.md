@@ -6,14 +6,9 @@ This small project is showing a basic usage of the paho library in python to ena
 
 These scripts are synchronizing 2 light traffic controllers with raspberry Pi and using MQTT (M2M communication)
 
-<div class="center" style="
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;">
-
-![](./assets/images/traffic_light_controllers.png)
-</div>
+<p align="center">
+  <img src="./assets/images/traffic_light_controllers.png" width="70%" title="hover text">
+</p>
 
 We're using sense_emu package to manipule the Sence Hat Emulator (will display the ligth color) in raspbian (Raspberry Pi OS) so make sure to run this script in a raspbian OS (use a vm).
 
@@ -25,14 +20,9 @@ The client1 should be the first script to run since it is listening and respondi
 
 * Making sure mosquitto broker is running
 
-<div class="center" style="
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;">
-
-![](./assets/images/broker_status.png#center)
-</div>
+<p align="center">
+  <img src="./assets/images/broker_status.png" width="80%" title="hover text">
+</p>
 
 If you're mosquitto broker is inactive, make sure to start it before running the scripts
 ```
@@ -41,14 +31,10 @@ mosquitto -v
 
 * Launching our first client script
 
-<div class="center" style="
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;">
+<p align="center">
+  <img src="./assets/images/client1_execution.png" width="80%" title="hover text">
+</p>
 
-![](assets/images/client1_execution.png)
-</div>
 
 The first client is only listening to the messages coming to the topic "light1" and responding by publishing its message to the topic "light2".
 
