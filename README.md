@@ -49,4 +49,17 @@ The client1 is only interacting with the light changes by reading the message fr
 
 ## About the authentication
 
-We're using username/password authentication when connecting to the broker and this needs additional configuration in mosquitto broker. (To disable this just delete the lines setting the credentials in the 2 clients)
+We're using username/password authentication when connecting to the broker and this needs additional configuration in mosquitto broker. To disable this just delete the lines setting the credentials in the 2 clients.
+
+The needed configuration is the mosquitto broker is quite simple and can be done using these commands
+```
+cd /etc/mosquitto/
+# pass is the name of the file where the credentials will be saved and change the username by the name you want
+sudo mosquitto.passwd -c /etc/mosquitto/pass username
+```
+Once the credentials are created, modify the config file to specify that we want credentials check when connnecting to the broker by adding this at the end of mosquitto.conf file
+```
+allow_anonymous false
+password_file /etc/mosquitto/pass
+```
+Restart mosquitto and the credentials check configuration will be applied.
