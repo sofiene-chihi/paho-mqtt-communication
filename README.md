@@ -16,7 +16,7 @@ You can run each script in a seperate VM and our broker on a another VM.
 
 ## How to execute it?
 
-The client1 should be the first script to run since it is listening and responding to the messages recieved from client2 and make sure that the mosquitto broker is running.
+The client1 should be the first script to run since it is listening and responding to the messages recieved from client2 and make sure that the broker is running.
 
 * Making sure mosquitto broker is running
 
@@ -55,7 +55,7 @@ The needed configuration is the mosquitto broker is quite simple and can be done
 ```
 cd /etc/mosquitto/
 # pass is the name of the file where the credentials will be saved and change the username by the name you want
-sudo mosquitto.passwd -c /etc/mosquitto/pass username
+sudo mosquitto_passwd -c /etc/mosquitto/pass username
 ```
 Once the credentials are created, modify the config file to specify that we want credentials check when connnecting to the broker by adding this at the end of mosquitto.conf file
 ```
